@@ -85,10 +85,13 @@ namespace nezhaV2 {
     pins.i2cWriteBuffer(i2cAddr, buf);
 
     /**
-     * Set motor to Nezha V2 direction and speed in sports mode.
-     * @param motor Set the motor position.eg: 1
-     * @param direction Set the motor movement direction.eg: 1
-     * @param motorFunction Set the motor movement mode.eg: 1
+     * Sets the speed and direction of the motor.
+     *
+     * @param motor The position of the motor, of the enum type NezhaV2MotorPosition.
+     * @param direction The direction of movement, of the enum type NezhaV2MovementDirection.
+     * @param speed The speed of the motor, ranging from 0 to 255.
+     * @param motorFunction The sports mode of the motor, of the enum type NezhaV2SportsMode.
+     * @returns This function does not return any value.
      */
     //% group="Basic functions"
     //% block="set %NezhaV2MotorPostion to run %NezhaV2MovementDirection %speed  %NezhaV2SportsMode"
@@ -109,10 +112,11 @@ namespace nezhaV2 {
 
 
     /**
-     * Set the servo to move to a specified position.
-     * @param motor Set the motor position.eg: 1
-     * @param modePostion Set the servo movement direction.eg: 1
-     * @param targetAngle Set the servo target angle.eg: 1
+     * Moves the servo motor to an absolute position.
+     *
+     * @param motor The position of the servo motor, ranging from 0 to 255.
+     * @param modePosition The direction of movement for the servo motor, ranging from 0 to 255.
+     * @param targetAngle The target angle, ranging from 0 to 359. If less than 0, it will be automatically converted to a positive number.
      */
     //% group="Basic functions"
     //% weight=406
@@ -137,10 +141,12 @@ namespace nezhaV2 {
     }
 
     /**
-     * Set the servo to move to a specified position.
-     * @param motor Set the motor position.eg: 1
-     * @param direction Set the motor movement direction.eg: 1
-     */
+ * Starts the Nezha V2 motor.
+ *
+ * @param motor The position of the motor.
+ * @param direction The direction of movement.
+ * @returns This function does not return any value.
+ */
     //% group="Basic functions"
     //% weight=405
     //% block="setting %NezhaV2MotorPostion to start the motor in %NezhaV2MovementDirection"
@@ -160,8 +166,10 @@ namespace nezhaV2 {
     }
 
     /**
-     * Set the motor to stop at a specified position.
-     * @param motor Set the motor position.eg: 1
+     * Stops the Nezha V2 motor.
+     *
+     * @param motor The position of the Nezha V2 motor.
+     * @returns This function does not return any value.
      */
     //% group="Basic functions"
     //% weight=404
@@ -181,9 +189,12 @@ namespace nezhaV2 {
     }
 
     /**
-     * Set the specified motor speed.
-     * @param motor Set the motor position.eg: 1
-     * @param speed Set the motor movement speed.eg: 100
+     * Controls the speed of a Nezha V2 motor.
+     *
+     * @param motor The position of the Nezha V2 motor, specified by an enumeration.
+     * @param speed The speed of the motor in revolutions per minute (RPM). 
+     *              Positive values indicate forward rotation, while negative values indicate reverse rotation.
+     * @returns This function does not return any value.
      */
     //% group="Basic functions"
     //% weight=403
@@ -220,13 +231,16 @@ namespace nezhaV2 {
         pins.i2cWriteBuffer(i2cAddr, buf);
     }
 
+
     /**
-     * Read the absolute angle of the servo.
-     * @param motor Set the motor position.eg: 1
+     * Reads the absolute position of a servo motor.
+     *
+     * @param motor The motor position, ranging from 0x00 to 0x0F.
+     * @returns The absolute position of the motor in degrees, ranging from 0 to 359.9.
      */
     //% group="Basic functions"
     //% weight=402
-    //%block="%NezhaV2MotorPostion Angular value"
+    //%block="%NezhaV2MotorPostion angular value"
     export function readServoAbsolutePostion(motor: NezhaV2MotorPostion): number {
         let buf = pins.createBuffer(8);
         buf[0] = 0xFF;
@@ -248,8 +262,10 @@ namespace nezhaV2 {
     }
 
     /**
-     * Read the motor speed.
-     * @param motor Set the motor position.eg: 1
+     * Reads the absolute speed of the servo motor.
+     *
+     * @param motor The position of the servo motor, of the type NezhaV2MotorPosition.
+     * @returns Returns the absolute speed of the servo motor, measured in degrees per second.
      */
     //% group="Basic functions"
     //% weight=400
@@ -272,8 +288,10 @@ namespace nezhaV2 {
     }
 
     /**
-     * Set the specified servo to zero.
-     * @param motor Set the motor position.eg: 1
+     * Resets the servo position.
+     *
+     * @param motor The enum value of NezhaV2MotorPosition, indicating the motor position.
+     * @returns Does not return any value.
      */
     //% group="Basic functions"
     //% weight=399
@@ -295,9 +313,11 @@ namespace nezhaV2 {
     let motorRightGlobal = 0
 
     /**
-     * Set the speed of the specified left and right motors.
-     * @param motorLeft Set left motor speed. eg: 100
-     * @param motorRight Set the motor position.eg: 100
+     * Sets the motors to run to the target speeds.
+     *
+     * @param motorLeft The position of the left motor.
+     * @param motorRight The position of the right motor.
+     * @returns Does not return any value.
      */
     //% group="Application functions"
     //% weight=410
@@ -308,8 +328,10 @@ namespace nezhaV2 {
     }
 
     /**
-     * set the motor speed.
-     * @param speed Set left motor speed. eg: 100
+     * Sets the motion speed.
+     *
+     * @param speed The speed of motion, measured in a specific numerical unit (defined according to the actual project requirements).
+     * @returns Does not return any value.
      */
     //% group="Application functions"
     //% weight=409
@@ -320,7 +342,9 @@ namespace nezhaV2 {
     }
 
     /**
-     * stop the motor movement.
+     * Stops the combined motors.
+     *
+     * @returns Does not return any value.
      */
     //% group="Application functions"
     //% weight=406
@@ -332,13 +356,14 @@ namespace nezhaV2 {
 
 
     /**
-     * set the motor movement direction.
-     * @param verticallDirection Set Movement Direction. eg: 1
+     * Controls the combined movement of the Nezha V2 robot in vertical directions.
+     *
+     * @param verticallDirection The vertical direction, with values from the NezhaV2VerticallDirection enumeration.
+     * @returns Does not return any value.
      */
     //% group="Application functions"
     //% weight=405
     //%block="move %NezhaV2VerticallDirection"
-
     export function combinationMotorNezhaV2VerticallDirectionMove(verticallDirection: NezhaV2VerticallDirection): void {
         switch (verticallDirection) {
             case NezhaV2VerticallDirection.Up:
@@ -354,9 +379,11 @@ namespace nezhaV2 {
     }
 
     /**
-     * Set Motor Wheel Speed.
-     * @param speedleft Set Left Wheel Speed. eg: 1
-     * @param speedright Set Right Wheel Speed. eg: 1
+     * Sets the speed of the left and right wheels.
+     *
+     * @param speedleft The speed of the left wheel. A positive value indicates counter-clockwise rotation, while a negative value indicates clockwise rotation.
+     * @param speedright The speed of the right wheel. A positive value indicates clockwise rotation, while a negative value indicates counter-clockwise rotation.
+     * @returns Does not return any value.
      */
     //% group="Application functions"
     //% weight=402
@@ -378,8 +405,10 @@ namespace nezhaV2 {
 
     }
 
-     /**
-     * Read Version.
+    /**
+     * Reads the version information.
+     *
+     * @returns Returns a version string in the format of `V x.y.z`.
      */
     //% group="export functions"
     //% weight=320
