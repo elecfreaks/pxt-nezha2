@@ -13,7 +13,9 @@
         "_locales/pxt-nezha2-jsdoc-strings.json",
         "_locales/zh/pxt-nezha2-strings.json",
         "_locales/zh/pxt-nezha2-jsdoc-strings.json",
-        "_locales/ko/pxt-nezha2-strings.json"
+        "_locales/ko/pxt-nezha2-strings.json",
+        "_locales/da/pxt-nezha2-strings.json",
+        "_locales/da/pxt-nezha2-jsdoc-strings.json"
     ],
     "testFiles": [
         "test.ts"
