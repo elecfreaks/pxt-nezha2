@@ -1,0 +1,60 @@
+{
+    "nezhaV2.DelayMode.AutoDelayStatus|block": "automatische vertraging",
+    "nezhaV2.DelayMode.NoDelay|block": "een vertraging",
+
+    "nezhaV2.MovementDirection.CW|block": "met de klok mee",
+    "nezhaV2.MovementDirection.CCW|block": "tegen de klok in",
+
+    "nezhaV2.SportsMode.Circle|block": "rondjes",
+    "nezhaV2.SportsMode.Degree|block": "graden",
+    "nezhaV2.SportsMode.Second|block": "seconden",
+
+    "nezhaV2.Uint.cm|block": "centimeter",
+    "nezhaV2.Uint.inch|block": "inch",
+
+    "nezhaV2.DistanceAndAngleUnit.Circle|block": "rondjes",
+    "nezhaV2.DistanceAndAngleUnit.Degree|block": "graden",
+    "nezhaV2.DistanceAndAngleUnit.Second|block": "seconden",
+    "nezhaV2.DistanceAndAngleUnit.cm|block": "centimeter",
+    "nezhaV2.DistanceAndAngleUnit.inch|block": "inch",
+
+    "nezhaV2.ServoMotionMode.ShortPath|block": "kortste pad",
+    "nezhaV2.ServoMotionMode.CW|block": "met de klok mee",
+    "nezhaV2.ServoMotionMode.CCW|block": "tegen de klok in",
+
+    "nezhaV2.VerticallDirection.Up|block": "voor",
+    "nezhaV2.VerticallDirection.Down|block": "achter",
+
+    "nezhaV2.move|block": "stel %motor in om met %speed \\% snelheid %direction te draaien gedurende %value %mode ||%isDelay ",
+    "nezhaV2.moveToAbsAngle|block": "stel %motor in om via %turnMode naar hoek %angle te draaien ||%isDelay ",
+    "nezhaV2.stop|block": "zet %motor uit",
+    "nezhaV2.start|block": "stel %motor in op %speed \\% en start de motor",
+
+    "nezhaV2.readAbsAngle|block": "absolute hoek van %motor",
+    "nezhaV2.readRelAngle|block": "relatieve hoek van %motor",
+    "nezhaV2.readSpeed|block": "snelheid van %motor (rondjes/s)",
+
+    "nezhaV2.reset|block": "reset motor %motor naar nul",
+    "nezhaV2.resetRelAngleValue|block": "zet relatieve hoek van %motor op nul",
+
+    "nezhaV2.setComboMotor|block": "stel gecombineerde motoren in: linker wiel %motor_l, rechter wiel %motor_r",
+    "nezhaV2.comboRun|block": "rijd met %speed \\% snelheid naar %direction",
+    "nezhaV2.comboStop|block": "stop beweging",
+
+    "nezhaV2.setWheelPerimeter|block": "stel wielomtrek in op %value %unit",
+    "nezhaV2.setWheelBase|block": "stel wielbasis (afstand tussen de wielen) in op %value %unit",
+    "nezhaV2.setComboRotateCalibration|block": "stel rotatie‑kalibratiefactor in op %factor",
+
+    "nezhaV2.comboMove|block": "rijd met %speed \\% snelheid naar %direction gedurende %value %uint",
+    "nezhaV2.comboRotate|block": "draai %angle graden met %speed \\% snelheid",
+    "nezhaV2.comboStart|block": "stel linker wiel in op %speed_l \\% en rechter wiel op %speed_r \\% en start",
+
+    "nezhaV2.readVersion|block": "versienummer",
+
+    "{id:group}Basic functions": "basisfuncties",
+    "{id:group}Application functions": "combinatiefuncties",
+    "{id:group}export functions": "overige",
+
+    "nezhaV2|block": "NeZha 2",
+    "{id:category}nezhaV2": "NeZha 2"
+}
