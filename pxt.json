@@ -1,6 +1,6 @@
 {
     "name": "pxt-nezha2",
-    "version": "1.2.2",
+    "version": "1.2.4",
     "description": "The micro:bit extension board Nezha2 with RJ11 connection port by ELECFREAKS Co.ltd",
     "license": "MIT",
     "dependencies": {
@@ -11,6 +11,8 @@
         "main.ts",
         "_locales/pxt-nezha2-strings.json",
         "_locales/pxt-nezha2-jsdoc-strings.json",
+        "_locales/nl/pxt-nezha2-strings.json",
+        "_locales/nl/pxt-nezha2-jsdoc-strings.json",
         "_locales/zh/pxt-nezha2-strings.json",
         "_locales/zh/pxt-nezha2-jsdoc-strings.json",
         "_locales/ko/pxt-nezha2-strings.json",
