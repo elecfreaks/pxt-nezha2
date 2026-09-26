@@ -1,0 +1,16 @@
+{
+  "nezhaV2.DelayMode.AutoDelayStatus|block": "automatisch",
+  "nezhaV2.DelayMode.NoDelay|block": "keine",
+  "nezhaV2.MovementDirection.CW|block": "im Uhrzeigersinn",
+  "nezhaV2.MovementDirection.CCW|block": "gegen den Uhrzeigersinn",
+  "nezhaV2.move|block": "drehe %motor mit Geschwindigkeit %speed \\% %direction %value %mode ||, %isDelay Verzögerung",
+  "nezhaV2.stop|block": "stoppe %motor",
+  "nezhaV2.start|block": "starte %motor mit Geschwindigkeit %speed \\%",
+  "nezhaV2.setComboMotor|block": "linkes Rad ist %motor_l , rechtes Rad ist %motor_r",
+  "nezhaV2.comboRun|block": "fahre mit Geschwindigkeit %speed \\% %direction",
+  "nezhaV2.comboStop|block": "halte an",
+  "{id:group}Basic functions": "Grundfunktionen",
+  "{id:group}Application functions": "Fahrfunktionen",
+  "nezhaV2|block": "nezhaV2",
+  "{id:category}nezhaV2": "nezhaV2"
+}
